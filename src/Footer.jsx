@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 export function Footer() {
   return (
     <footer>
-      <p>Copyright 2022</p>
+      <br />
+      <br />
+      <Link to="/login">Login</Link>
     </footer>
   );
 }
