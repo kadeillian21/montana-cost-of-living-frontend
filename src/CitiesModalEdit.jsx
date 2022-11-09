@@ -36,6 +36,13 @@ export function CitiesModalEdit(props) {
         <div>
           Price of Gas: $<input type="number" name="gas_price" defaultValue={props.city.gas_price} />
         </div>
+        <div>
+          {props.city.images?.map((image) => (
+            <div key={image.id}>
+              Image Url: <input type="text" name="url" defaultValue={image.url} />
+            </div>
+          ))}
+        </div>
         <button type="submit">Update {props.city.name}</button>
       </form>
     </div>
