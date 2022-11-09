@@ -12,7 +12,6 @@ export function CitiesModalShow(props) {
       <p>Population Growth per Year: {props.city.population_percent_change}%</p>
       <p>Median Monthly Mortgage: ${props.city.median_monthly_mortgage}</p>
       <p>Price of Gas: ${props.city.gas_price}</p>
-      <p>Monthly Average Food Cost: ${props.city.monthly_average_food_cost}</p>
       <Link to={`/cities/${props.city.id}`}>More Info</Link>
     </div>
   );

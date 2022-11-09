@@ -12,7 +12,6 @@ export function CitiesIndex(props) {
           <p>Population Growth per Year: {city.population_percent_change}%</p>
           <p>Median Monthly Mortgage: ${city.median_monthly_mortgage}</p>
           <p>Price of Gas: ${city.gas_price}</p>
-          <p>Monthly Average Food Cost: ${city.monthly_average_food_cost}</p>
           <button onClick={() => props.onSelectCity(city)}>More info</button>
         </div>
       ))}
