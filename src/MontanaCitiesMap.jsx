@@ -7,9 +7,9 @@ mapboxgl.accessToken = import.meta.env.VITE_MONTANA_COST_OF_LIVING_TOKEN;
 export function MontanaCitiesMap() {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
+  const [lng, setLng] = useState(-109.68642453848274);
+  const [lat, setLat] = useState(46.76675102746894);
+  const [zoom, setZoom] = useState(6);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
