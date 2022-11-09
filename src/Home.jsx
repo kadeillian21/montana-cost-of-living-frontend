@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { CitiesIndex } from "./CitiesIndex";
 import { CitiesModalShow } from "./CitiesModalShow";
 import { Modal } from "./Modal";
+import { MontanaCitiesMap } from "./MontanaCitiesMap";
 
 export function Home() {
   const [cities, setCities] = useState([]);
@@ -36,6 +37,7 @@ export function Home() {
       <Modal show={isCitiesModalShowVisible} onClose={handleHideCity}>
         <CitiesModalShow city={currentCity} />
       </Modal>
+      <MontanaCitiesMap />
     </div>
   );
 }
