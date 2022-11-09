@@ -1,8 +1,24 @@
-export function CitiesIndex(props) {
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+export function CitiesIndex() {
+  const [cities, setCities] = useState([]);
+
+  const handleIndexCities = () => {
+    console.log("handleIndexCities");
+    axios.get("http://localhost:3000/cities.json").then((response) => {
+      console.log(response.data);
+      setCities(response.data);
+    });
+  };
+
+  useEffect(handleIndexCities, []);
+
   return (
     <div>
       <h1>Cities</h1>
-      {props.cities.map((city) => (
+      {cities.map((city) => (
         <div key={city.id}>
           <h2>{city.name}</h2>
           <p>{city.description}</p>
@@ -12,7 +28,7 @@ export function CitiesIndex(props) {
           <p>Population Growth per Year: {city.population_percent_change}%</p>
           <p>Median Monthly Mortgage: ${city.median_monthly_mortgage}</p>
           <p>Price of Gas: ${city.gas_price}</p>
-          <button onClick={() => props.onSelectCity(city)}>More info</button>
+          <Link to={`/cities/${city.id}`}>More Info</Link>
         </div>
       ))}
     </div>

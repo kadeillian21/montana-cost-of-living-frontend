@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export function CitiesShow() {
+export function CitiesShow(props) {
   const params = useParams();
   const [city, setCity] = useState([]);
 
@@ -38,6 +38,7 @@ export function CitiesShow() {
           </tr>
         </tbody>
       </table>
+      <button onClick={() => props.onSelectCity(city)}>Edit {city.name}</button>
     </div>
   );
 }
