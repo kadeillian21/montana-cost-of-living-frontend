@@ -37,7 +37,6 @@ export function Home() {
       <Modal show={isCitiesModalShowVisible} onClose={handleHideCity}>
         <CitiesModalShow city={currentCity} />
       </Modal>
-      <MontanaCitiesMap />
     </div>
   );
 }
