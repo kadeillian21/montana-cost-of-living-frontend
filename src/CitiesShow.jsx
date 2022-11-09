@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Modal } from "./Modal.jsx";
+import { CitiesModalEdit } from "./CitiesModalEdit";
 
-export function CitiesShow(props) {
+export function CitiesShow() {
   const params = useParams();
   const [city, setCity] = useState([]);
+  const [isCityEditModalVisible, setIsCityEditModalVisible] = useState(false);
 
   const handleShowCity = () => {
     console.log("handleShowCity");
@@ -12,6 +15,18 @@ export function CitiesShow(props) {
     axios.get(`http://localhost:3000/cities/${params.cityId}.json`).then((response) => {
       console.log(response.data);
       setCity(response.data);
+    });
+  };
+
+  const onSelectCity = () => {
+    setIsCityEditModalVisible(true);
+  };
+
+  const handleUpdateCity = (id, params) => {
+    axios.patch("http://localhost:3000/cities/" + id + ".json", params).then((response) => {
+      const updatedCity = response.data;
+      setCity(updatedCity);
+      setIsCityEditModalVisible(false);
     });
   };
 
@@ -38,7 +53,10 @@ export function CitiesShow(props) {
           </tr>
         </tbody>
       </table>
-      <button onClick={() => props.onSelectCity(city)}>Edit {city.name}</button>
+      <Modal show={isCityEditModalVisible} onClose={() => setIsCityEditModalVisible(false)}>
+        <CitiesModalEdit city={city} onUpdateCity={handleUpdateCity} />
+      </Modal>
+      <button onClick={() => onSelectCity(city)}>Edit {city.name}</button>
     </div>
   );
 }
