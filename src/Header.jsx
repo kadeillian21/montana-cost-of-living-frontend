@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Logout } from "./Logout";
 
 export function Header() {
   return (
@@ -21,15 +22,23 @@ export function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Home
+              <Link className="nav-link active" aria-current="page" to="/cities">
+                Cities List
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/login">
-                Login
-              </Link>
-            </li>
+            {localStorage.jwt === undefined ? (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="/login">
+                    Login
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <li className="nav-item">
+                <Logout />
+              </li>
+            )}
           </ul>
         </div>
       </div>
