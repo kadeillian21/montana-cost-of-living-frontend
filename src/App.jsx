@@ -8,7 +8,7 @@ import { CitiesIndex } from "./CitiesIndex";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <Header className="sticky content" />
       <Routes>
         <Route path="/cities" element={<CitiesIndex />} />
         <Route path="/login" element={<Login />} />
