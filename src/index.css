@@ -11,3 +11,7 @@ html {
 .map-container {
   height: 100vh;
 }
+
+.marker-popup img{
+  max-width: 100%;
+}
