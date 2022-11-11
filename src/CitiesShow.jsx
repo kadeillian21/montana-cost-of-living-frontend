@@ -56,7 +56,7 @@ export function CitiesShow() {
       <Modal show={isCityEditModalVisible} onClose={() => setIsCityEditModalVisible(false)}>
         <CitiesModalEdit city={city} onUpdateCity={handleUpdateCity} />
       </Modal>
-      <button onClick={() => onSelectCity(city)}>Edit {city.name}</button>
+      {localStorage.jwt === undefined ? <></> : <button onClick={() => onSelectCity(city)}>Edit {city.name}</button>}
     </div>
   );
 }
