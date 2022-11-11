@@ -10,7 +10,7 @@ export function Logout() {
   };
 
   return (
-    <Link onClick={handleClick} className="nav-link active" aria-current="page">
+    <Link onClick={handleClick} className="nav-link active text-white" aria-current="page">
       Logout
     </Link>
   );

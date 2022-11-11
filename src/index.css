@@ -1,3 +1,7 @@
+#root {
+  background-image: url('./assets/montana-col-ss.png');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,4 +25,29 @@ html {
 
 .city-name {
   margin-top: 2em;
+}
+
+.water-bg {
+  background-color: #79BCEC;
+}
+
+.lowland-bg {
+  background-color: #D6DC9E;
+}
+
+.forest-bg {
+  background-color: forestgreen;
+}
+
+#lowland-button {
+  background-color: #C0DA95;
+}
+
+#lowland-card {
+  background-color: #D7D9A0;
+}
+
+.image-grid img{
+  height: 200px;
+  width: 350px;
 }

@@ -8,8 +8,8 @@ export function MontanaCitiesMap() {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng, setLng] = useState(-110.1);
-  const [lat, setLat] = useState(46.76675102746894);
-  const [zoom, setZoom] = useState(6.5);
+  const [lat, setLat] = useState(47);
+  const [zoom, setZoom] = useState(6.25);
 
   const [cities, setCities] = useState([]);
 

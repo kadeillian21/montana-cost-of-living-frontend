@@ -33,8 +33,8 @@ export function CitiesShow() {
   useEffect(handleShowCity, []);
 
   return (
-    <div className="m-3">
-      <h2 className="city-name">{city.name}</h2>
+    <div className="container lowland-bg pt-5 mt-2">
+      <h2 className="text-center">{city.name}</h2>
       <p>{city.description}</p>
       <p>Median Income: ${city.median_income}</p>
       <p>Median Rent with Utilities: ${city.median_gross_rent}</p>
@@ -42,17 +42,23 @@ export function CitiesShow() {
       <p>Population Growth per Year: {city.population_percent_change}%</p>
       <p>Median Monthly Mortgage: ${city.median_monthly_mortgage}</p>
       <p>Price of Gas: ${city.gas_price}</p>
-      <div className="row">
+      <div className="row justify-content-center">
         {city.images?.map((image) => (
-          <div className="col-sm-3" key={image.id}>
-            <img src={image.url} className="img-fluid" />
+          <div className="col-sm-3 mx-3 my-1 image-grid" key={image.id}>
+            <img src={image.url} />
           </div>
         ))}
       </div>
       <Modal show={isCityEditModalVisible} onClose={() => setIsCityEditModalVisible(false)}>
         <CitiesModalEdit city={city} onUpdateCity={handleUpdateCity} />
       </Modal>
-      {localStorage.jwt === undefined ? <></> : <button onClick={() => onSelectCity(city)}>Edit {city.name}</button>}
+      {localStorage.jwt === undefined ? (
+        <></>
+      ) : (
+        <button className="btn btn-primary" onClick={() => onSelectCity(city)}>
+          Edit {city.name}
+        </button>
+      )}
     </div>
   );
 }
