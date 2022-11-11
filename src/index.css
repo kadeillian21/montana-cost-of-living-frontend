@@ -18,3 +18,7 @@ html {
 .cities-index img {
   max-width: 30%;
 }
+
+.city-name {
+  margin-top: 2em;
+}

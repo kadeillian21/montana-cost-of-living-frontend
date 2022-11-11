@@ -33,8 +33,8 @@ export function CitiesShow() {
   useEffect(handleShowCity, []);
 
   return (
-    <div>
-      <h2>{city.name}</h2>
+    <div className="m-3">
+      <h2 className="city-name">{city.name}</h2>
       <p>{city.description}</p>
       <p>Median Income: ${city.median_income}</p>
       <p>Median Rent with Utilities: ${city.median_gross_rent}</p>
@@ -42,17 +42,13 @@ export function CitiesShow() {
       <p>Population Growth per Year: {city.population_percent_change}%</p>
       <p>Median Monthly Mortgage: ${city.median_monthly_mortgage}</p>
       <p>Price of Gas: ${city.gas_price}</p>
-      <table>
-        <tbody className="formatted-image-table">
-          <tr>
-            {city.images?.map((image) => (
-              <td key={image.id}>
-                <img src={image.url} className="img-fluid" />
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
+      <div className="row">
+        {city.images?.map((image) => (
+          <div className="col-sm-3" key={image.id}>
+            <img src={image.url} className="img-fluid" />
+          </div>
+        ))}
+      </div>
       <Modal show={isCityEditModalVisible} onClose={() => setIsCityEditModalVisible(false)}>
         <CitiesModalEdit city={city} onUpdateCity={handleUpdateCity} />
       </Modal>
