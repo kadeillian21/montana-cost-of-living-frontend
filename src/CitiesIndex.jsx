@@ -15,12 +15,12 @@ export function CitiesIndex() {
   useEffect(handleIndexCities, []);
 
   return (
-    <div>
+    <div className="m-2">
       <h1>Cities</h1>
       <div className="row">
         {cities.map((city) => (
           <div className="col-sm-6">
-            <div key={city.id} className="card cities-index">
+            <div key={city.id} className="card cities-index p-1">
               <h2>{city.name}</h2>
               <p>{city.description}</p>
               <img src={city.images[0].url} />
