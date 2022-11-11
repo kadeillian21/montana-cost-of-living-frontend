@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal.jsx";
 import { CitiesModalEdit } from "./CitiesModalEdit";
+import { Card } from "react-bootstrap";
 
 export function CitiesShow() {
   const params = useParams();
@@ -36,12 +37,32 @@ export function CitiesShow() {
     <div className="container lowland-bg pt-5 mt-2">
       <h2 className="text-center">{city.name}</h2>
       <p>{city.description}</p>
-      <p>Median Income: ${city.median_income}</p>
-      <p>Median Rent with Utilities: ${city.median_gross_rent}</p>
-      <p>Population: {city.population}</p>
-      <p>Population Growth per Year: {city.population_percent_change}%</p>
-      <p>Median Monthly Mortgage: ${city.median_monthly_mortgage}</p>
-      <p>Price of Gas: ${city.gas_price}</p>
+      <Card className="p-1">
+        <Card.Title>Economy</Card.Title>
+        <Card.Text>
+          <p>Median Income: ${city.median_income}</p>
+        </Card.Text>
+      </Card>
+      <Card className="p-1">
+        <Card.Title>Demographics</Card.Title>
+        <Card.Text>
+          <p>Population: {city.population}</p>
+          <p>Population Growth per Year: {city.population_percent_change}%</p>
+        </Card.Text>
+      </Card>
+      <Card className="p-1">
+        <Card.Title>Housing</Card.Title>
+        <Card.Text>
+          <p>Median Rent with Utilities: ${city.median_gross_rent}</p>
+          <p>Median Monthly Mortgage: ${city.median_monthly_mortgage}</p>{" "}
+        </Card.Text>
+      </Card>
+      <Card className="p-1">
+        <Card.Title>Food and Gas</Card.Title>
+        <Card.Text>
+          <p>Price of Gas: ${city.gas_price}</p>
+        </Card.Text>
+      </Card>
       <div className="row justify-content-center">
         {city.images?.map((image) => (
           <div className="col-sm-3 mx-3 my-1 image-grid" key={image.id}>
