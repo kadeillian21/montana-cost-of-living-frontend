@@ -22,14 +22,7 @@ export function MontanaCitiesMap() {
   };
 
   useEffect(handleIndexCities, []);
-  // const inputs = layerList.getElementsByTagName("input");
 
-  // for (const input of inputs) {
-  //   input.onclick = (layer) => {
-  //     const layerId = layer.target.id;
-  //     map.setStyle("mapbox://styles/mapbox/" + layerId);
-  //   };
-  // }
   useEffect(() => {
     if (map.current) {
       cities.forEach((city) => {
@@ -58,12 +51,6 @@ export function MontanaCitiesMap() {
   return (
     <div>
       <div ref={mapContainer} className="map-container"></div>
-      {/* <div id="menu">
-        <input id="mapbox://styles/kadeillian/cla9yhitx000214r35vvxrlu5" type="radio" name="rtoggle" value="outdoors" />
-        <label for="custom-streets">Streets</label>
-        <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked" />
-        <label for="satellite-v9">Satellite</label>
-      </div> */}
     </div>
   );
 }

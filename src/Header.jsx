@@ -3,7 +3,7 @@ import { Logout } from "./Logout";
 
 export function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav className="navbar navbar-expand-lg bg-primary fixed-top navbar-light" style={{ backgroundColor: "#79BCEC" }}>
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           Montana Cost of Living

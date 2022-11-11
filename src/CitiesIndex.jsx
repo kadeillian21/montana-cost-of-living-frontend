@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -18,15 +17,21 @@ export function CitiesIndex() {
   return (
     <div>
       <h1>Cities</h1>
-      {cities.map((city) => (
-        <div key={city.id}>
-          <h2>{city.name}</h2>
-          <p>{city.description}</p>
-          <img src={city.images[0].url} />
-          <p>Population: {city.population}</p>
-          <Link to={`/cities/${city.id}`}>More Info</Link>
-        </div>
-      ))}
+      <div className="row">
+        {cities.map((city) => (
+          <div className="col-sm-6">
+            <div key={city.id} className="card cities-index">
+              <h2>{city.name}</h2>
+              <p>{city.description}</p>
+              <img src={city.images[0].url} />
+              <p>Population: {city.population}</p>
+              <a className="btn btn-primary" href={`/cities/${city.id}`}>
+                More Info About {city.name}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

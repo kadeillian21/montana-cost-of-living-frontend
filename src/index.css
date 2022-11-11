@@ -7,11 +7,14 @@ html {
 
 }
 
-
 .map-container {
   height: 100vh;
 }
 
 .marker-popup img{
   max-width: 100%;
+}
+
+.cities-index img {
+  max-width: 30%;
 }
