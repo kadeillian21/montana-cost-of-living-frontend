@@ -29,9 +29,11 @@ export function MontanaCitiesMap() {
         const popup = new mapboxgl.Popup({ offset: 25, className: "marker-popup" }).setHTML(`<h2>${city.name}</h1>
         <img src=${city.images[0].url}>
         <p>${city.description}</p>
-        <p>Population: ${city.population}</p>
-        <p>Median Income: $${city.median_income}</p>
-        <a href="/cities/${city.id}">Learn More</a>`);
+        <strong>Population: ${city.population}</strong>
+        <br />
+        <strong>Median Income: $${city.median_income}</strong>
+        <br />
+        <a class="btn btn-success" href="/cities/${city.id}">Learn More about ${city.name}</a>`);
         new mapboxgl.Marker({ color: "red" })
           .setLngLat([city.longitude, city.latitude])
           .addTo(map.current)

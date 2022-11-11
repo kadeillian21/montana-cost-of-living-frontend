@@ -55,3 +55,9 @@ html {
 .index-size img{
   width: 100px
 }
+
+.mapboxgl-popup-content {
+  background-color: skyblue;
+  width: 120%;
+  text-align: center;
+}
