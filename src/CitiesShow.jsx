@@ -34,7 +34,7 @@ export function CitiesShow() {
   useEffect(handleShowCity, []);
 
   return (
-    <div className="container lowland-bg pt-5 mt-2">
+    <div className="container lowland-bg p-2 mt-5">
       <h2 className="text-center">{city.name}</h2>
       <p>{city.description}</p>
       <Card className="p-1">

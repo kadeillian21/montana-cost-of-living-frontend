@@ -32,7 +32,7 @@ html {
 }
 
 .lowland-bg {
-  background-color: #D6DC9E;
+  background-color: #acd587;
 }
 
 .forest-bg {
@@ -44,10 +44,14 @@ html {
 }
 
 #lowland-card {
-  background-color: #D7D9A0;
+  background-color: #acd587;
 }
 
 .image-grid img{
   height: 200px;
   width: 350px;
+}
+
+.index-size img{
+  width: 100px
 }
