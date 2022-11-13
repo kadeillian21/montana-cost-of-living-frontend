@@ -33,6 +33,7 @@ html {
 
 .lowland-bg {
   background-color: #acd587;
+  height: 10px;
 }
 
 .forest-bg {
@@ -60,4 +61,13 @@ html {
   background-color: skyblue;
   width: 120%;
   text-align: center;
+}
+
+.col-sm-6 {
+  height: 20px!;
+}
+
+#bootstrap-overrides #lowland-card {
+  height: 100%;
+  overflow: hidden;
 }

@@ -18,7 +18,7 @@ export function CitiesIndex() {
     <div className="mt-5 p-2">
       <div className="row m-2">
         {cities.map((city) => (
-          <div className="col-sm-6">
+          <div className="col-sm-6 mt-3">
             <div key={city.id} className="card cities-index p-1" id="lowland-card">
               <div className="row mx-auto">
                 <div className="col-sm-6">
