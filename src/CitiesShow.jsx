@@ -34,9 +34,11 @@ export function CitiesShow() {
   useEffect(handleShowCity, []);
 
   return (
-    <div className="container lowland-bg p-2 mt-5">
-      <h2 className="text-center">{city.name}</h2>
-      <p>{city.description}</p>
+    <div className="container show-body p-2 mt-5">
+      <div className="container text-bg-success mt-2 p-2">
+        <h2 className="text-center p-3">{city.name}</h2>
+        <p>{city.description}</p>
+      </div>
       <Card className="p-1">
         <Card.Title>Economy</Card.Title>
         <Card.Text>
