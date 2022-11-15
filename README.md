@@ -14,7 +14,7 @@ The frontend portion of this app is currently only at the minimum viable product
 
 ### Project Screen Shot(s)
 
-<img src="https://postimg.cc/Ln3FhTTj">
+<img src="https://i.postimg.cc/8PqpKXfX/Screen-Shot-2022-11-15-at-1-37-35-PM.png">
 
 <img src="">
 
