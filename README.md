@@ -16,7 +16,7 @@ The frontend portion of this app is currently only at the minimum viable product
 
 <img src="https://i.postimg.cc/8PqpKXfX/Screen-Shot-2022-11-15-at-1-37-35-PM.png">
 
-<img src="">
+<img src="https://i.postimg.cc/0NrrhK2c/Screen-Shot-2022-11-15-at-1-39-47-PM.png">
 
 ## Installation and Setup Instructions
 
