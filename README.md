@@ -1,4 +1,4 @@
-## Project Name & Pitch
+# Montana Cost-Of-Living Frontend
 
 #### Example:
 
