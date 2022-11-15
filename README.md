@@ -1,6 +1,6 @@
 # Montana Cost-Of-Living Frontend
 
-### Description:
+## Description:
 
 The Montana Cost-Of-Living Frontend works hand-in-hand with the Montana Cost-Of-Living API. The frontend's job is to render the data that is stored and manipulated in the backend. The data from the backend gives the coordiantes for the markers on the Mapbox frontend map. The frontend has four major components at the moment: the Mapbox map that renders markers with popups for each city I have data on, the cities index action that shows a list of all the cities in the backend, the cities show action which shows one particular city to the user, and the cities edit action which allows an authorized user to edit a city. The frontend also has a login and logout link based on whether the current user is logged in or not.
 
@@ -8,19 +8,17 @@ The Mapbox map has custom styling that I applied to the map. The borders between
 
 The styling for the app is mostly done with Bootstrap classes, though I have added my own custom CSS in multiple places. The most notable examples of these are the "City Cards" in the index action and the cards that display more specific information about the city in the show action. The navbar is also a Bootstrap navbar. I used custom CSS to style things such as my show action image gallery, the background for the index and show actions, and for the card backgrounds.
 
-### Project Status
+## Project Status
 
 The frontend portion of this app is currently only at the minimum viable product stage. I would like to have more coherent styling throughout the app. I would also like to fix the afformentioned bug where the popups do not always fit inside the map. Most of my work going forward will be on the backend API where I will add APIs to gather the data that I want for the city, fix a bug where images are not updated, and perhaps add a more secure way to authenticate users.
 
-### Project Screen Shot(s)
+## Project Screen Shot(s)
 
 <img src="https://i.postimg.cc/8PqpKXfX/Screen-Shot-2022-11-15-at-1-37-35-PM.png">
 
 <img src="https://i.postimg.cc/0NrrhK2c/Screen-Shot-2022-11-15-at-1-39-47-PM.png">
 
 ## Installation and Setup Instructions
-
-#### Example:
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
@@ -37,15 +35,6 @@ To Visit App:
 `localhost:5173`
 
 ## Reflection
-
-- What was the context for this project? (ie: was this a side project? was this for Turing? was this for an experiment?)
-- What did you set out to build?
-- Why was this project challenging and therefore a really good learning experience?
-- What were some unexpected obstacles?
-- What tools did you use to implement this project?
-  - This might seem obvious because you are IN this codebase, but to all other humans now is the time to talk about why you chose webpack instead of create react app, or D3, or vanilla JS instead of a framework etc. Brag about your choices and justify them here.
-
-#### Example:
 
 This was a 3 week long project built during my third module at Turing School of Software and Design. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.
 
