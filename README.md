@@ -12,17 +12,11 @@ The styling for the app is mostly done with Bootstrap classes, though I have add
 
 The frontend portion of this app is currently only at the minimum viable product stage. I would like to have more coherent styling throughout the app. I would also like to fix the afformentioned bug where the popups do not always fit inside the map. Most of my work going forward will be on the backend API where I will add APIs to gather the data that I want for the city, fix a bug where images are not updated, and perhaps add a more secure way to authenticate users.
 
-#### Example:
+### Project Screen Shot(s)
 
-This project is currently in development. Users can filter tweets by username and keyword and see visual data representation. Functionality to sort by additional parameters is in progress.
+<img src="https://postimg.cc/Ln3FhTTj">
 
-## Project Screen Shot(s)
-
-#### Example:
-
-[ PRETEND SCREEN SHOT IS HERE ]
-
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
+<img src="">
 
 ## Installation and Setup Instructions
 
@@ -34,17 +28,13 @@ Installation:
 
 `npm install`
 
-To Run Test Suite:
-
-`npm test`
-
 To Start Server:
 
-`npm start`
+`npm run dev`
 
 To Visit App:
 
-`localhost:3000/ideas`
+`localhost:5173`
 
 ## Reflection
 
