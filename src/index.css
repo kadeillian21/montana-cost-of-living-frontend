@@ -45,7 +45,10 @@ html {
 }
 
 #lowland-card {
-  background-color: #acd587;
+  background-color: lightblue;
+  border-style: solid;
+  border-color: #FF9F80;
+  border-width: 3px;
 }
 
 .image-grid img{
@@ -53,14 +56,13 @@ html {
   width: 350px;
 }
 
-.index-size img{
-  width: 100px
-}
-
 .mapboxgl-popup-content {
-  background-color: skyblue;
-  width: 120%;
+  background-color: lightblue;
+  width: 150%;
   text-align: center;
+  border-style: solid;
+  border-color: #FF9F80;
+  border-width: 3px;
 }
 
 .col-sm-6 {
@@ -75,3 +77,4 @@ html {
 #show-body {
   background-image: url('./assets/montana-col-ss.png');
 }
+

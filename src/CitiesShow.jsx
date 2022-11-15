@@ -39,27 +39,27 @@ export function CitiesShow() {
         <h2 className="text-center p-3">{city.name}</h2>
         <p>{city.description}</p>
       </div>
-      <Card className="p-1">
+      <Card className="p-1" id="lowland-card">
         <Card.Title>Economy</Card.Title>
         <Card.Text>
           <p>Median Income: ${city.median_income}</p>
         </Card.Text>
       </Card>
-      <Card className="p-1">
+      <Card className="p-1" id="lowland-card">
         <Card.Title>Demographics</Card.Title>
         <Card.Text>
           <p>Population: {city.population}</p>
           <p>Population Growth per Year: {city.population_percent_change}%</p>
         </Card.Text>
       </Card>
-      <Card className="p-1">
+      <Card className="p-1" id="lowland-card">
         <Card.Title>Housing</Card.Title>
         <Card.Text>
           <p>Median Rent with Utilities: ${city.median_gross_rent}</p>
           <p>Median Monthly Mortgage: ${city.median_monthly_mortgage}</p>{" "}
         </Card.Text>
       </Card>
-      <Card className="p-1">
+      <Card className="p-1" id="lowland-card">
         <Card.Title>Food and Gas</Card.Title>
         <Card.Text>
           <p>Price of Gas: ${city.gas_price}</p>

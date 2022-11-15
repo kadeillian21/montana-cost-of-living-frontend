@@ -19,20 +19,15 @@ export function CitiesIndex() {
       <div className="row m-2">
         {cities.map((city) => (
           <div className="col-sm-6 mt-3">
-            <div key={city.id} className="card cities-index p-1" id="lowland-card">
-              <div className="row mx-auto">
-                <div className="col-sm-6">
-                  <h2>{city.name}</h2>
-                  <p>{city.description}</p>
-                  <p>Population: {city.population}</p>
-                  <a className="btn btn-primary align-self-end" href={`/cities/${city.id}`}>
-                    More Info About {city.name}
-                  </a>
-                </div>
-                <div className="col-sm-6 image-fluid text-center my-auto image-size">
-                  <img src={city.images[0].url} />
-                </div>
+            <div key={city.id} className="card cities-index p-2" id="lowland-card">
+              <div className="col text-center my-auto bigger">
+                <img src={city.images[0].url} />
               </div>
+              <h2 className="text-center">{city.name}</h2>
+              <p className="text-center">{city.description}</p>
+              <a className="btn btn-primary" href={`/cities/${city.id}`}>
+                More Info About {city.name}
+              </a>
             </div>
           </div>
         ))}
