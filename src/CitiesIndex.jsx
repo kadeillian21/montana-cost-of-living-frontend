@@ -20,7 +20,7 @@ export function CitiesIndex() {
         {cities.map((city) => (
           <div className="col-sm-6 mt-3">
             <div key={city.id} className="card cities-index p-2" id="lowland-card">
-              <div className="col text-center my-auto bigger">
+              <div className="col text-center my-auto">
                 <img src={city.images[0].url} />
               </div>
               <h2 className="text-center">{city.name}</h2>

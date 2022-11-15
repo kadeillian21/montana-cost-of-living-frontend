@@ -1,14 +1,16 @@
 # Montana Cost-Of-Living Frontend
 
-#### Example:
+### Description:
 
-TweetWorld
+The Montana Cost-Of-Living Frontend works hand-in-hand with the Montana Cost-Of-Living API. The frontend's job is to render the data that is stored and manipulated in the backend. The data from the backend gives the coordiantes for the markers on the Mapbox frontend map. The frontend has four major components at the moment: the Mapbox map that renders markers with popups for each city I have data on, the cities index action that shows a list of all the cities in the backend, the cities show action which shows one particular city to the user, and the cities edit action which allows an authorized user to edit a city. The frontend also has a login and logout link based on whether the current user is logged in or not.
 
-An application used to filter data form Twitter based on user preference, built with React, Redux, JavaScript, and CSS.
+The Mapbox map has custom styling that I applied to the map. The borders between countries and states are thicker to better demonstrate where Montana actually is. One of my biggest frustrations with mapping services is that at certain zoom levels, borders between states can barely be made out. I was able to remedy this situation with custom styling on the Mapbox website. I also made the green areas of the map even greener as I felt it was more aesthetic. Finally, I made the names of waterbodies stand out more by changing the font-color and the font-size. These changes are made to the default view when you access the application. In addition to these modifications, I also changed the Mapbox default popup to fit with my app's theme. One bug I would like to fix would be make sure that the popup always fits completely on the screen. At the moment, I have not been able to do so with Mapbox's technology.
 
-## Project Status
+The styling for the app is mostly done with Bootstrap classes, though I have added my own custom CSS in multiple places. The most notable examples of these are the "City Cards" in the index action and the cards that display more specific information about the city in the show action. The navbar is also a Bootstrap navbar. I used custom CSS to style things such as my show action image gallery, the background for the index and show actions, and for the card backgrounds.
 
-(only necessary if incomplete)
+### Project Status
+
+The frontend portion of this app is currently only at the minimum viable product stage. I would like to have more coherent styling throughout the app. I would also like to fix the afformentioned bug where the popups do not always fit inside the map. Most of my work going forward will be on the backend API where I will add APIs to gather the data that I want for the city, fix a bug where images are not updated, and perhaps add a more secure way to authenticate users.
 
 #### Example:
 
