@@ -78,7 +78,7 @@ export function CitiesShow() {
       {localStorage.jwt === undefined ? (
         <></>
       ) : (
-        <button className="btn btn-primary" onClick={() => onSelectCity(city)}>
+        <button className="btn" id="cities-button" onClick={() => onSelectCity(city)}>
           Edit {city.name}
         </button>
       )}

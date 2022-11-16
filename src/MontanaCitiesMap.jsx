@@ -34,7 +34,7 @@ export function MontanaCitiesMap() {
         <br />
         <strong>Median Income: $${city.median_income}</strong>
         <br />
-        <a class="btn btn-success" href="/cities/${city.id}">Learn More about ${city.name}</a>`);
+        <a class="btn" id="cities-button" href="/cities/${city.id}">Learn More about ${city.name}</a>`);
         new mapboxgl.Marker({ color: "red" })
           .setLngLat([city.longitude, city.latitude])
           .addTo(map.current)

@@ -82,3 +82,11 @@ html {
   background-color: #0059A5;
   color: white
 }
+
+#login-container {
+  height: 10em;
+}
+
+#login-container-bottom {
+  height: 40em;
+}
