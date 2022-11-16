@@ -25,7 +25,7 @@ export function CitiesIndex() {
               </div>
               <h2 className="text-center">{city.name}</h2>
               <p className="text-center">{city.description}</p>
-              <a className="btn btn-primary" href={`/cities/${city.id}`}>
+              <a className="btn" id="cities-button" href={`/cities/${city.id}`}>
                 More Info About {city.name}
               </a>
             </div>

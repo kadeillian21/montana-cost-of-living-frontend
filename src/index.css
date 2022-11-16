@@ -45,7 +45,7 @@ html {
 }
 
 #lowland-card {
-  background-color: lightblue;
+  background-color: #E3F7D3;
   border-style: solid;
   border-color: #FF9F80;
   border-width: 3px;
@@ -78,3 +78,7 @@ html {
   background-image: url('./assets/montana-col-ss.png');
 }
 
+#cities-button {
+  background-color: #0059A5;
+  color: white
+}
